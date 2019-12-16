@@ -19,3 +19,7 @@ class ghost:
     
     def get_pos(self):
         return self.pos
+    def set_pos(self, x, y):
+        self.pos = [x, y]
+    def set_start_pos(self, id):
+        self.pos = [constants.INI_G_X[id], constants.INI_G_Y[id]]

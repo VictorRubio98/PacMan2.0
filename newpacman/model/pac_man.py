@@ -20,3 +20,5 @@ class pac_man:
     
     def set_start_pos(self):
         self.pos = [constants.INI_X, constants.INI_Y]
+    def set_pos(self, x, y):
+        self.pos = [x, y]

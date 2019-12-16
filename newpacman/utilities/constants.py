@@ -1,5 +1,8 @@
 class constants:
 
+    LAYOUT = "newpacman/layouts/layout2.txt"
+    POINTS = "newpacman/layouts/points2.txt"
+
     UP_CODE = "UP"
     DOWN_CODE = "DOWN"
     LEFT_CODE = "LEFT"
@@ -15,6 +18,7 @@ class constants:
     SPACE_NUM = 32
     X_NUM = 88
     AST_NUM = 42
+    ZERO_CHAR = 48
     ONE_NUM = 1
     TWO_NUM = 2
     THREE_NUM = 3
@@ -24,11 +28,12 @@ class constants:
 
     MAX_X = 10
     MAX_Y = 35
-    SPEED = 0.5
-    INI_X = 1
-    INI_Y = 1
-    INI_G_X = 3
-    INI_G_Y = 9
+    SPEED = 0.3
+    MAX_GOD_MODE = 10
+    INI_X = 6
+    INI_Y = 16
+    INI_G_X = [1,1,8,8]
+    INI_G_Y = [2,32,2,32]
 
     ESC_1 = 27
     ESC_2 = 91
@@ -40,6 +45,7 @@ class constants:
 
     ANSI_RIGHT = "\033[C"
     ANSI_LEFT = "\033[D"
+    #ANSI_ERASE_NEXT = "\033"
     ANSI_BLUE = "\u001b[34;1m"
     ANSI_BACK_BLUE = "\u001b[44m"
     ANSI_YELLOW = "\u001b[33m"

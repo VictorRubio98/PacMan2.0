@@ -1,3 +1,3 @@
-from newpacman.model.map import map
+from newpacman.controller.moderator import moderator
 
-m = map()
+m = moderator()

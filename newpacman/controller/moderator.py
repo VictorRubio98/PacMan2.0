@@ -10,6 +10,7 @@ class moderator:
         self.previously_read = ""
         self.direction = ""
         self.lifes = 3
+        self.engine()
         
     def read(self):
         try:
@@ -33,7 +34,7 @@ class moderator:
             elif ord(ch) == constants.ENTER:
                     return -1
         except:
-            return self.previously_read
+            return self.previoulifesead
 
     def read_event(self):
         while self.direction != -1:
@@ -44,8 +45,8 @@ class moderator:
         th.start()
         got_a_kill = False
         while(self.direction != -1):
-            points = self.m.move_pacman(self.direction)
-            got_a_kill = self.m.random_move()
+            points = self.m.move_pacman(self.direction, self.lifes)
+            got_a_kill = self.m.almost_smart_move()
             time.sleep(constants.SPEED)
             if (got_a_kill == True):
                 self.lifes = self.lifes - 1
@@ -58,6 +59,6 @@ class moderator:
 
     def end_game(self, win):
         self.direction = -1
-        self.m.end_game(win) 
+        self.m.end_game(win)
 
         
